@@ -1,0 +1,90 @@
+body > .dashboard {
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: 70px;
+}
+nav {
+    color: white;
+    background-color: black;
+    height: 70px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+main > .sidebar {
+    background-color: aqua;
+    width: calc(100vw / 3);
+    flex-direction: column;
+}
+
+main > .elements {
+    background-color: aquamarine;
+    width: calc(2 * 100vw / 3);
+}
+
+.news-container {
+    width: 200px;
+}
+
+.news-container > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1 rem;
+    justify-content: center;
+}
+
+.panel_loginu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div > .login {
+    background-color: aqua;
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#powrot {
+    margin-left: 20px;
+    margin-top: 20px;
+}

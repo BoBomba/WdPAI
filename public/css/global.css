@@ -49,6 +49,7 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-right: 5vw;
 }
 .news {
     display: flex;

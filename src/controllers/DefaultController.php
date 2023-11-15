@@ -1,16 +1,21 @@
 <?php
 
+// Importuje klasę AppController.php
 require_once 'AppController.php';
 
 class DefaultController extends AppController {
 
-    public function index()
+    // Metoda obsługująca żądanie dla ścieżki '/login'
+    public function login()
     {
-        $this->render('login');
+        // Wywołuje metodę render z klasy AppController, przekazując 'login' jako szablon widoku
+        $this->render('login'); // nazwa strony html bez '.html'
     }
 
-    public function students()
+    // Metoda obsługująca żądanie dla ścieżki '/students'
+    public function dashboard()
     {
-        $this->render('students');
+        // Wywołuje metodę render z klasy AppController, przekazując 'dashboard' jako szablon widoku
+        $this->render('dashboard');  // nazwa strony html bez '.html'
     }
 }

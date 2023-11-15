@@ -50,7 +50,10 @@ ul {
     align-items: center;
     gap: 2rem;
     margin-right: 5vw;
+    cursor: pointer;
 }
+
+
 .news {
     display: flex;
     flex-wrap: wrap;
@@ -83,6 +86,10 @@ form {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+button {
+    cursor: pointer;
 }
 
 #powrot {

@@ -1,7 +1,8 @@
 <?php
 
-// Importuj klasę DefaultController.php
+// Importuj klasę DefaultController.php i ErrorController
 require_once 'src/controllers/DefaultController.php';
+require_once 'src/controllers/ErrorController.php';
 
 class Routing {
 
@@ -17,11 +18,13 @@ class Routing {
   public static function run ($url) {
     // Pobierz akcję z pierwszej części ścieżki URL
     $action = explode("/", $url)[0];
-
+  
     // Sprawdź, czy istnieje taka trasa w zdefiniowanych trasach
     if (!array_key_exists($action, self::$routes)) {
-      print($url);
       die("Wrong url!");
+      //TODO dodać przekierowanie na strone 404.html
+      $error = ErrorController();
+      // $error => err404(); nie dziala
     }
 
     // Pobierz kontroler zdefiniowany dla danej trasy

@@ -2,11 +2,28 @@
 
 class AppController {
 
+    private $request;
+
+    public function __construct()
+    {
+        $this->request = $_SERVER['REQUEST_METHOD'];
+    }
+
+    protected function isGet(): bool
+    {
+        return $this->request === 'GET';
+    }
+
+    protected function isPost(): bool
+    {
+        return $this->request === 'POST';
+    }
+
     // Metoda renderująca widok na podstawie szablonu i zmiennych
     protected function render(string $template = null, array $variables = [])
     {
         // Ścieżka do szablonu widoku
-        $templatePath = 'public/views/' . $template . '.html';
+        $templatePath = 'src/views/' . $template . '.php';
         
         // Domyślna wartość dla przypadku, gdy plik szablonu nie zostanie znaleziony
         $output = 'File not found';

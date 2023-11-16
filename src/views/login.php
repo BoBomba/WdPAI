@@ -16,10 +16,11 @@
     <div class="panel_loginu">
         <div class="login">
             <h1>Login</h1>
-            <form>
+            <form action="/login" method="POST">
                 <input type="email">
                 <input type="password">
-                <input type="button" value="Sign in">
+                <button type="submit">Sign in</button>
+                <button type="reset">reset</button>
             </form>
         </div>
     </div>

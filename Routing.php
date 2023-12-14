@@ -14,6 +14,10 @@ class Routing {
     self::$routes[$url] = $view;
   }
 
+  public static function post($url, $view) {
+    self::$routes[$url] = $view;
+  }
+
   // Metoda do uruchamiania routingu na podstawie odczytanej ścieżki
   public static function run ($url) {
     // Pobierz akcję z pierwszej części ścieżki URL
@@ -22,7 +26,7 @@ class Routing {
     // Sprawdź, czy istnieje taka trasa w zdefiniowanych trasach
     if (!array_key_exists($action, self::$routes)) {
       die("Wrong url!");
-      //TODO dodać przekierowanie na strone 404.html
+      // TODO dodać przekierowanie na strone 404.html
       $error = ErrorController();
       // $error => err404(); nie dziala
     }

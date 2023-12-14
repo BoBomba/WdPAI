@@ -7,5 +7,6 @@
 </head>
 <body>
     <p>ERROR 404</p>
+    <h1>Nie ma takiej strony<h1>
 </body>
 </html>

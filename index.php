@@ -12,8 +12,5 @@ $path = parse_url($path, PHP_URL_PATH);
 Routing::get('', 'DefaultController');
 Routing::get('dashboard', 'DefaultController');
 
-// Wypisz do konsoli (zakomentowane, aby nie generować dodatkowego outputu)
-// echo(__DIR__ . $path);
-
 // Uruchom mechanizm routowania na podstawie odczytanej ścieżki
 Routing::run($path);

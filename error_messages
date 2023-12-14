@@ -1,0 +1,54 @@
+damian@MacBook-Air-Damian WdPAI % docker-compose build
+[+] Building 53.1s (6/6) FINISHED                                                                                                               docker:desktop-linux
+ => [db internal] load .dockerignore                                                                                                                            0.0s
+ => => transferring context: 2B                                                                                                                                 0.0s
+ => [db internal] load build definition from Dockerfile                                                                                                         0.0s
+ => => transferring dockerfile: 146B                                                                                                                            0.0s
+ => CANCELED [db internal] load metadata for docker.io/library/postgres:latest                                                                                 53.1s
+ => [php internal] load .dockerignore                                                                                                                           0.0s
+ => => transferring context: 2B                                                                                                                                 0.0s
+ => [php internal] load build definition from Dockerfile                                                                                                        0.0s
+ => => transferring dockerfile: 797B                                                                                                                            0.0s
+ => ERROR [php internal] load metadata for docker.io/library/php:7.4.3-fpm-alpine3.11                                                                          51.9s
+------
+ > [php internal] load metadata for docker.io/library/php:7.4.3-fpm-alpine3.11:
+------
+failed to solve: php:7.4.3-fpm-alpine3.11: failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://production.cloudflare.docker.com/registry-v2/docker/registry/v2/blobs/sha256/32/32add3e138c9b6eb69cb4a2a7ee4041dcf444c022addbd3176ed40bd1b7dfd38/data?verify=1702570336-R50uI%2Fm%2BL6jQclLNTXf4HtWNUD0%3D": EOF
+damian@MacBook-Air-Damian WdPAI % docker-compose build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+damian@MacBook-Air-Damian WdPAI % docker-compose build
+[+] Building 72.5s (6/6) FINISHED                                                                                                               docker:desktop-linux
+ => [db internal] load build definition from Dockerfile                                                                                                        10.0s
+ => => transferring dockerfile: 146B                                                                                                                           10.0s
+ => [db internal] load .dockerignore                                                                                                                           10.0s
+ => => transferring context: 2B                                                                                                                                10.0s
+ => [php internal] load .dockerignore                                                                                                                          10.0s
+ => => transferring context: 2B                                                                                                                                10.0s
+ => [php internal] load build definition from Dockerfile                                                                                                       10.0s
+ => => transferring dockerfile: 797B                                                                                                                           10.0s
+ => ERROR [db internal] load metadata for docker.io/library/postgres:latest                                                                                    42.5s
+ => ERROR [php internal] load metadata for docker.io/library/php:7.4.3-fpm-alpine3.11                                                                          42.4s
+------
+ > [db internal] load metadata for docker.io/library/postgres:latest:
+------
+------
+ > [php internal] load metadata for docker.io/library/php:7.4.3-fpm-alpine3.11:
+------
+failed to solve: php:7.4.3-fpm-alpine3.11: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fphp%3Apull&service=registry.docker.io": net/http: TLS handshake timeout
+damian@MacBook-Air-Damian WdPAI % docker-compose build
+[+] Building 77.0s (6/6) FINISHED                                                                                                               docker:desktop-linux
+ => [php internal] load .dockerignore                                                                                                                           0.0s
+ => => transferring context: 2B                                                                                                                                 0.0s
+ => [php internal] load build definition from Dockerfile                                                                                                        0.0s
+ => => transferring dockerfile: 797B                                                                                                                            0.0s
+ => ERROR [php internal] load metadata for docker.io/library/php:7.4.3-fpm-alpine3.11                                                                          76.9s
+ => [db internal] load build definition from Dockerfile                                                                                                         0.0s
+ => => transferring dockerfile: 146B                                                                                                                            0.0s
+ => [db internal] load .dockerignore                                                                                                                            0.0s
+ => => transferring context: 2B                                                                                                                                 0.0s
+ => CANCELED [db internal] load metadata for docker.io/library/postgres:latest                                                                                 77.0s
+------
+ > [php internal] load metadata for docker.io/library/php:7.4.3-fpm-alpine3.11:
+------
+failed to solve: php:7.4.3-fpm-alpine3.11: failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://production.cloudflare.docker.com/registry-v2/docker/registry/v2/blobs/sha256/eb/ebe48747072b5990cf2343d86218bd619a8233f83d0a57d5fe56cbf1cdb46029/data?verify=1702571010-8tKvAmnXp%2BMEeXVl8wo5YXgVEH0%3D": EOF
+damian@MacBook-Air-Damian WdPAI %

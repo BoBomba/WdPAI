@@ -13,7 +13,7 @@ class DogsRepository extends Repository
             SELECT * FROM dogs;
         ');
         $stmt->execute();
-        $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC); //PDO::FETCH_CLASS); by skrocic
 
          foreach ($dogs as $dog) {
              $result[] = new Dog(
@@ -26,5 +26,7 @@ class DogsRepository extends Repository
          }
 
         return $result;
+
+        //TODO gdy nie pobierze danych trzeba dodac throw new exeption
     }
 }

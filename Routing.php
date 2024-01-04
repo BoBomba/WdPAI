@@ -25,10 +25,10 @@ class Routing {
   
     // Sprawdź, czy istnieje taka trasa w zdefiniowanych trasach
     if (!array_key_exists($action, self::$routes)) {
-      die("Wrong url!");
+      //die("Wrong url!");
       // TODO dodać przekierowanie na strone 404.html
-      $error = ErrorController();
-      // $error => err404(); nie dziala
+      $action = err404();
+      //$action = err404(); //nie dziala
     }
 
     // Pobierz kontroler zdefiniowany dla danej trasy

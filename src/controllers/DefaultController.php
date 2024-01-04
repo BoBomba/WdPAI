@@ -29,4 +29,9 @@ class DefaultController extends AppController {
             "dogs" => $this->dogsRepository->getDogs()
         ]);
     }
+
+    public function register()
+    {
+        $this->render("register");
+    }
 }

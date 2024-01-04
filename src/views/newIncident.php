@@ -8,21 +8,23 @@
     <title>Document</title>
 </head>
 
-<body class="login">
+<body class="incident">
 
     <a href="/dashboard">
         Powrót
     </a>
-    <div class="panel_loginu">
+    <div class="add_incident">
         <div class="login">
-            <h1>Login</h1>
-            <form action="/login" method="POST">
-                <input type="email">
-                <input type="password">
-                <button type="submit">Zaloguj się</button>
+            <!-- TODO  -->
+            <h1>Nowe Zdarzenie</h1>
+            <form action="/add" method="POST">
+                <input type="text" id="what_happened">
+                <input type="text" id="description">
+                <input type="where">
+                <input type="when">
+                <button type="submit">Zarejestuj Zdarzenie</button>
                 <button type="reset">reset</button>
             </form>
-            <a href="/register">Zarejestruj się</a>
         </div>
     </div>
 </body>

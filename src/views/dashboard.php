@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/global.css">
+    
     <title>Dashboard</title>
 </head>
 
@@ -37,7 +38,7 @@
             <h1>Elements<h1>
                 <div class="news">
 
-                    <?php foreach($dogs as $dog): ?>
+                <?php foreach($dogs as $dog): ?>
 
                     <div class="news-container">
                         <img class="news-image" src="https://cdn2.thecatapi.com/images/bnr.jpg" alt="News Image 1">
@@ -48,7 +49,7 @@
                         </div>
                     </div> 
 
-                    <?php endforeach; ?>
+                <?php endforeach; ?>
 
                 </div>
                     

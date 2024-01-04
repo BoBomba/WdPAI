@@ -10,19 +10,19 @@
 
 <body class="login">
 
-    <a href="/dashboard">
-        Powrót
+    <a href="/">
+        Logowanie
     </a>
     <div class="panel_loginu">
         <div class="login">
             <!-- TODO  -->
-            <h1>Register</h1>
+            <h1>Rejestracja</h1>
             <form action="/register" method="POST">
                 <input type="text" id="firstname">
                 <input type="text" id="lastname">
                 <input type="email">
                 <input type="password">
-                <button type="submit">Sign up</button>
+                <button type="submit">Zarejestruj się</button>
                 <button type="reset">reset</button>
             </form>
         </div>

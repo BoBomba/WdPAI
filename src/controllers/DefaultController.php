@@ -6,6 +6,11 @@ require_once __DIR__.'/../models/Dog.php';
 
 class DefaultController extends AppController {
 
+    public function Main()
+    {
+        $this->render("Main");
+    }
+
     // Metoda obsługująca żądanie dla ścieżki '/login'
     public function login()
     {
@@ -13,8 +18,10 @@ class DefaultController extends AppController {
         {
             return $this->render('login'); // nazwa strony html bez '.html'
         }
-
-        die("Form Send");
+        if($this->isPost())
+        {
+            die("Form Send");
+        }
     }
 
     public function index() {
@@ -32,6 +39,13 @@ class DefaultController extends AppController {
 
     public function register()
     {
-        $this->render("register");
+        if($this->isGet())
+        {
+            return $this->render('register'); // nazwa strony html bez '.html'
+        }
+        if($this->isPost())
+        {
+            die("Form Send");
+        }
     }
 }

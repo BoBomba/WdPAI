@@ -8,25 +8,39 @@
     <title>Document</title>
 </head>
 
-<body class="login">
+<body class="register">
 
-    <a href="/">
-        Logowanie
-    </a>
-    <div class="panel_loginu">
-        <div class="login">
+    <div id="powrot" ><a href="/" id="logreg">Powrót</a></div>
+        <div class="main-container">
             <!-- TODO  -->
             <h1>Rejestracja</h1>
             <form action="/register" method="POST">
-                <input type="text" id="firstname">
-                <input type="text" id="lastname">
-                <input type="email">
-                <input type="password">
-                <button type="submit">Zarejestruj się</button>
-                <button type="reset">reset</button>
+                <div id="input">
+                    <img src="src/images/user.png">
+                    <input type="text" id="firstname" placeholder="Wprowadź Imie">
+                </div>
+                <div id="input">
+                    <img src="src/images/user.png">
+                    <input type="text" id="lastname" placeholder="Wprowadź Nazwisko">
+                </div>
+
+                <div id="input">
+                    <img src="src/images/user.png">
+                    <input type="email" placeholder="Wprowadź email">
+                </div>
+                
+                <div id="input">
+                    <img src="src/images/lock.png">
+                    <input type="password" placeholder="Wprowadź hasło">
+                </div>
+                <div id="input">
+                    <img src="src/images/lock.png">
+                    <input type="password" placeholder="Wprowadź ponownie hasło">
+                </div>
+                <button id="logreg" type="submit">Zarejestruj się</button>
+                <button id="logreg" type="reset">reset</button>
             </form>
         </div>
-    </div>
 </body>
 
 </html>

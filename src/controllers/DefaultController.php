@@ -4,6 +4,8 @@
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Dog.php';
 
+//TODO zrobic fetchapi i endpointy lab14 bitbucket
+
 class DefaultController extends AppController {
 
     public function Main()

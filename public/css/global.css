@@ -141,6 +141,14 @@ a {
     line-height: normal;
     letter-spacing: 1px;
 }
+#logreg:hover {
+    background: #532ca8;
+}
+
+form>#logreg {
+    padding: 0.5em;
+    border: 0;
+}
 
 .main-container {
     display: flex;

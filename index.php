@@ -15,7 +15,7 @@ Routing::get('Main', 'DefaultController');
 Routing::get('dashboard', 'DefaultController');
 Routing::get('register', 'DefaultController');
 Routing::get('err404', 'ErrorController');
-
+Routing::get('newIncident', 'DefaultController');
 
 
 

@@ -50,4 +50,16 @@ class DefaultController extends AppController {
             die("Form Send");
         }
     }
+
+    public function newIncident()
+    {
+        if($this->isGet())
+        {
+            return $this->render('newIncident'); // nazwa strony html bez '.html'
+        }
+        if($this->isPost())
+        {
+            die("Form Send");
+        }
+    }
 }

@@ -10,15 +10,17 @@
 
 <body class="login">
     <div id="powrot" ><a href="/" id="logreg">Powrót</a></div>
-        <div class="main-container">
+        <div class="main-container" style="height: 25em;">
             <h1>Login</h1>
             <form action="/login" method="POST">
                 <div id="input">
-                    <img src="src/images/user.png">
+                    <!-- <img src="src/images/user.png"> jakby nie dzialało svg-->
+                    <img src="src/images/user.svg">
                     <input type="email" placeholder="Wprowadź email">
                 </div>
                 <div id="input">
-                    <img src="src/images/lock.png">
+                    <!-- <img src="src/images/lock.png" id="lock"> to samo -->
+                    <img src="src/images/lock.svg" id="lock">
                     <input type="password" placeholder="Wprowadź hasło">
                 </div>
                 <button id="logreg" type="submit">Zaloguj się</button>

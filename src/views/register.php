@@ -11,32 +11,38 @@
 <body class="register">
 
     <div id="powrot" ><a href="/" id="logreg">Powrót</a></div>
-        <div class="main-container">
-            <!-- TODO  -->
+        <div class="main-container" style="gap:0;">
+        
             <h1>Rejestracja</h1>
             <form action="/register" method="POST">
+
                 <div id="input">
-                    <img src="src/images/user.png">
+                    <!-- <img src="src/images/user.png">  jakby nie działało svg--> 
+                    <img src="src/images/user.svg">
                     <input type="text" id="firstname" placeholder="Wprowadź Imie">
                 </div>
+
                 <div id="input">
-                    <img src="src/images/user.png">
+                    <img src="src/images/user.svg">
                     <input type="text" id="lastname" placeholder="Wprowadź Nazwisko">
                 </div>
 
                 <div id="input">
-                    <img src="src/images/user.png">
+                    <img src="src/images/user.svg">
                     <input type="email" placeholder="Wprowadź email">
                 </div>
                 
                 <div id="input">
-                    <img src="src/images/lock.png">
+                    <!-- <img src="src/images/lock.png" id="lock"> to samo -->
+                    <img src="src/images/lock.svg" id="lock">
                     <input type="password" placeholder="Wprowadź hasło">
                 </div>
+
                 <div id="input">
-                    <img src="src/images/lock.png">
+                    <img src="src/images/lock.svg" id="lock">
                     <input type="password" placeholder="Wprowadź ponownie hasło">
                 </div>
+
                 <button id="logreg" type="submit">Zarejestruj się</button>
                 <button id="logreg" type="reset">reset</button>
             </form>

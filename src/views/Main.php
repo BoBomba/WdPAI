@@ -10,10 +10,10 @@
 
 <body>
     <div class="main-container">
-        <img src="src/images/MpkGo.png">
-        <img src="src/images/MpkGo_Icon.png">
-        <a id="logreg" href="/register">Zarejestruj się</a>
+        <img src="src/images/MpkGo.svg">
+        <img src="src/images/MpkGo_Icon.svg">
         <a id="logreg" href="/login">Zaloguj się</a>
+        <a id="logreg" href="/register">Zarejestruj się</a>
     </div>
 
 </body>

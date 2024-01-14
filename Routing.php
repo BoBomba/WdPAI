@@ -27,7 +27,7 @@ class Routing {
     if (!array_key_exists($action, self::$routes)) {
       die("Wrong url!");
       // TODO dodać przekierowanie na strone 404.html
-      $action = err404();
+      // $action = $action ?: 'err404';
       //$action = err404(); //nie dziala
     }
 

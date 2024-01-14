@@ -34,8 +34,7 @@ class DefaultController extends AppController {
     public function dashboard()
     {
         $this->render("dashboard", [
-            "title" => "Hello on my dashboard", 
-            "dogs" => $this->dogsRepository->getDogs()
+            "title" => "Hello on my dashboard"
         ]);
     }
 

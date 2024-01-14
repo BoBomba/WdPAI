@@ -5,56 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/global.css">
+    <script src="./public/js/script.js"></script>
+
+    <script async src="https://maps.googleapis.com/maps/api/js?key=____&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
     
     <title>Dashboard</title>
 </head>
 
 <body class="dashboard">
-
-    <a href="/dashboard">
-        Powrót
-    </a>
-
     <nav>
-        <h1>Logo</h1>
-        <ul>
-            <li>HOME</li>
-            <li>Create</li>
-            <li>List</li>
-            <li href="/login">Login</li>
-        </ul>
+        <a id="navMenu" onclick="toggleMenu()">|||</a>
+
+        <img id="textlogo" src="src/images/MpkGo_white.svg">
+        <img id="logo" src="src/images/MpkGo_Icon_white.svg">
     </nav>
 
+    <div class="navbar" id="myNavbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
     <main>
-
-        <div class="sidebar">
-
-            Sidebar
-
-        </div>
-
-        <div class="elements">
-
-            <h1>Elements<h1>
-                <div class="news">
-
-                <?php foreach($dogs as $dog): ?>
-
-                    <div class="news-container">
-                        <img class="news-image" src="https://cdn2.thecatapi.com/images/bnr.jpg" alt="News Image 1">
-                        <div class="news-description">
-                            <p></p>
-                            <p>Short description of the news article goes here. Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit.</p>
-                        </div>
-                    </div> 
-
-                <?php endforeach; ?>
-
-                </div>
-                    
-        </div>
+        <gmp-map center="50.06553268432617,19.943950653076172" zoom="14" map-id="DEMO_MAP_ID">
+            <gmp-advanced-marker position="50.06553268432617,19.943950653076172" title="My location">
+            </gmp-advanced-marker>
+        </gmp-map>
     </main>
+
+    <footer>
+        Damian Guca
+    </footer>
 
 </body>
 

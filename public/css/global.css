@@ -1,4 +1,3 @@
-
 body {
     background: #FFF;
 }
@@ -12,33 +11,47 @@ body>.dashboard {
 
 nav {
     color: white;
-    background-color: black;
+    background-color: #6938D3;
     height: 70px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
 }
 
+#textlogo {
+    height: 1em;
+    width: auto;
+}
+
+#logo {
+    height: 1.5em;
+    width: auto;
+    padding-right: 1rem;
+}
+
+nav>p {
+    text-align: center;
+}
+
+nav>a {
+    color: white;
+    padding-left: 1.5rem;
+}
+
 main {
     display: flex;
     flex-direction: row;
-}
-
-main>.sidebar {
-    background-color: aqua;
-    width: calc(100vw / 3);
-    flex-direction: column;
+    flex: 1;
 }
 
 main>.elements {
     background-color: aquamarine;
-    width: calc(2 * 100vw / 3);
+    width: 100%;
 }
 
 .news-container {
@@ -141,6 +154,7 @@ a {
     line-height: normal;
     letter-spacing: 1px;
 }
+
 #logreg:hover {
     background: #532ca8;
 }
@@ -168,4 +182,29 @@ form>#logreg {
 #lock {
     padding-left: 5px;
     padding-right: 5px;
+}
+
+/* hamburger menu */
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 75%;
+    background-color: white;
+    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.25);
+    /* z-index: 1000; */
+    padding-top: 60px;
+    transform: translateX(-101%); /* Ukrywa menu na początku */
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: #bebebe;
 }

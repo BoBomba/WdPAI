@@ -1,18 +1,25 @@
 <?php
 
 class User {
+    private $id;
     private $email;
     private $password;
     private $name;
     private $surname;
+    private $userType;
 
-    public function __construct(string $email,string $password,string $name,string $surname) {
+    public function __construct(string $email, string $password, string $name, string $surname, string $userType) {
+        $this->id = uniqid();
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
+        $this->userType = $userType;
     }
 
+    public function getId(): int {
+        return $this->id;
+    }
     public function getEmail(): string {
         return $this->email;
     }
@@ -24,6 +31,9 @@ class User {
     }
     public function getSurname(): string {
         return $this->surname;
+    }
+    public function getUserType(): string {
+        return $this->userType;
     }
 
     public function setEmail(string $email){
@@ -37,6 +47,9 @@ class User {
     }
     public function setSurname(string $surname){
         $this->surname = $surname;
+    }
+    public function setUserType(string $userType){
+        $this->userType = $userType;
     }
 
 

@@ -10,20 +10,34 @@
 
 <body class="incident">
 
-    <a href="/dashboard">
-        Powrót
-    </a>
+<div id="powrot" ><a href="/dashboard" id="logreg">Powrót</a></div>
     <div class="add_incident">
-        <div class="login">
-            <!-- TODO  -->
+        <div class="main-container">
             <h1>Nowe Zdarzenie</h1>
-            <form action="/add" method="POST">
-                <input type="text" id="what_happened">
-                <input type="text" id="description">
-                <input type="where">
-                <input type="when">
-                <button type="submit">Zarejestuj Zdarzenie</button>
-                <button type="reset">reset</button>
+            <form action="/addIncident" method="POST" enctype="multipart/form-data">
+                <div id="input">
+                    <input type="text" name="title" placeholder="Co się stało?">
+                </div>
+                <div id="input">
+                    <input type="text" name="description" rows="2" placeholder="Opisz zdarzenie">
+                </div>
+                <div id="input">
+                    <input type="text" name="location" placeholder="Gdzie się to stało?">
+                </div>
+                <div id="input">
+                    <input type="file" name="file" placeholder="Dodaj Zdjęcie">
+                </div>
+
+                <div id="messages"><?php
+                        if (isset($messages)){
+                            foreach ($messages as $message){
+                                echo "".$message."";
+                            } 
+                        }
+                ?></div>
+
+                <button id="logreg" type="submit">Zarejestuj Zdarzenie</button>
+                <button id="logreg" type="reset">reset</button>
             </form>
         </div>
     </div>

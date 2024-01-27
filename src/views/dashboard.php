@@ -14,6 +14,18 @@
 </head>
 
 <body class="dashboard">
+
+    <?php if (isset($_SESSION['incident_added']) && $_SESSION['incident_added']): ?>
+        <script>
+            window.onload = function() {
+                alert('Pomyślnie dodano zdarzenie');
+            };
+        </script>
+        <?php unset($_SESSION['incident_added']); // Usuń flagę z sesji ?>
+    <?php endif; ?>
+
+
+
     <nav>
         <a id="navMenu" onclick="toggleMenu()">|||</a>
 
@@ -25,11 +37,12 @@
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Services</a>
+        <a href="/newIncident">Dodaj Incydent</a>
         <a href="#">Contact</a>
     </div>
 
     <main>
-        <a href="/newIncident">Dodaj Incydent</a>
+        
     </main>
 
     <footer>

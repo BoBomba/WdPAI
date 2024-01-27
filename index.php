@@ -17,6 +17,7 @@ Routing::get('register', 'DefaultController');
 Routing::get('err404', 'ErrorController');
 Routing::get('newIncident', 'ProjectController');
 Routing::post('login', 'SecurityController');
+Routing::post('addIncident','ProjectController');
 
 
 

@@ -4,6 +4,8 @@ class AppController {
 
     private $request;
 
+    private $messages = [];
+
     public function __construct()
     {
         $this->request = $_SERVER['REQUEST_METHOD'];

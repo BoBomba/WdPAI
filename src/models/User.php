@@ -8,13 +8,13 @@ class User {
     private $surname;
     private $userType;
 
-    public function __construct(string $email, string $password, string $name, string $surname, string $userType) {
+    public function __construct(string $email, string $password, string $name, string $surname) {
         $this->id = uniqid();
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
-        $this->userType = $userType;
+        $this->userType = 'normalUser';
     }
 
     public function getId(): int {

@@ -178,7 +178,9 @@ form>#logreg {
     align-items: center;
     gap: 2rem;
     width: 20em;
-    height: 30em;
+    /* height: 30em; */
+    padding-top: 2em;
+    padding-bottom: 2em;
     flex-direction: column;
     margin: 0 auto;
     margin-top: 5em;
@@ -220,4 +222,10 @@ form>#logreg {
 
 .navbar a:hover {
     background-color: #bebebe;
+}
+
+#regbutton {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
 }

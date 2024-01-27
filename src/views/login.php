@@ -10,7 +10,7 @@
 
 <body class="login">
     <div id="powrot" ><a href="/" id="logreg">Powrót</a></div>
-        <div class="main-container" style="height: 27em;">
+        <div class="main-container">
             <h1>Login</h1>
             <form action="/login" method="POST">
                 <div id="input">
@@ -36,8 +36,10 @@
                 <button id="logreg" type="reset">reset</button>
             </form>
             <a  id="forgot" href="/forgotpasswd">Zapomniałeś hasła?</a>
-            <a id="logreg" href="/register">Zarejestruj się</a>
         </div>
+        <div id="regbutton">
+            <a id="logreg" href="/register">Zarejestruj się</a>
+        </div>               
 </body>
 
 </html>

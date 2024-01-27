@@ -10,9 +10,6 @@ class ProjectController extends AppController
     const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
-
-    private $messages = [];
-
     // Metoda obsługująca żądanie dla ścieżki '/404'
     public function newIncident()
     {
@@ -50,7 +47,6 @@ class ProjectController extends AppController
         if (empty($_POST['location'])) {
             $this->messages[] = 'Miejsce jest wymagane.<br>';
         }
-        // Kontynuuj walidacje dla innych pól...
 
         if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
             // Walidacja pliku
@@ -94,22 +90,4 @@ class ProjectController extends AppController
     $this->render('newIncident');
 }
 
-    // public function addIncident()
-    // {
-        
-    //     if ($this->isPost() && isset($_FILES['file']) && $this->validate($_FILES['file']) && is_uploaded_file($_FILES['file']['tmp_name'])) {
-
-    //         move_uploaded_file(
-    //             $_FILES['file']['tmp_name'], 
-    //             dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
-    //         );
-
-    //         // Ustaw flagę sukcesu w sesji
-    //         $_SESSION['incident_added'] = true;
-
-    //         return $this->render('/dashboard');
-    //     }
-
-    //     $this->render('newIncident');
-    // }
 }

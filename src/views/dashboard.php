@@ -38,7 +38,7 @@
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="/newIncident">Dodaj Incydent</a>
-        <a href="#">Contact</a>
+        <a href="/">Wyloguj</a>
     </div>
 
     <main>

@@ -1,7 +1,7 @@
 <?php
 
-// Importuje klasę AppController.php
 require_once 'AppController.php';
+require_once __DIR__.'/../models/Incident.php';
 
 class ProjectController extends AppController
 {

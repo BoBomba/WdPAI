@@ -19,6 +19,7 @@ Routing::get('newIncident', 'ProjectController');
 Routing::post('login', 'SecurityController');
 Routing::post('addIncident','ProjectController');
 Routing::post('register', 'SecurityController');
+Routing::get('logout','SecurityController');
 
 
 

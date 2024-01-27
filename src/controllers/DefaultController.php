@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Importuje klasę AppController.php
 require_once 'AppController.php';

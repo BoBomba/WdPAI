@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Incident.php';
@@ -10,7 +11,6 @@ class ProjectController extends AppController
     const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
-    // Metoda obsługująca żądanie dla ścieżki '/404'
     public function newIncident()
     {
         $this->render('newIncident'); // nazwa strony html bez '.html'
@@ -37,7 +37,7 @@ class ProjectController extends AppController
 {
     if ($this->isPost()) {
 
-        // Przykładowe walidacje
+        //walidacje
         if (empty($_POST['title'])) {
             $this->messages[] = 'Tytuł jest wymagany.<br>';
         }
@@ -51,7 +51,6 @@ class ProjectController extends AppController
         if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
             // Walidacja pliku
             if (!$this->validate($_FILES['file'])) {
-                // Jeśli plik nie przeszedł walidacji, dodaj komunikat o błędzie
                 $this->messages[] = 'Błąd przesyłania pliku.<br>';
             } else {
                 // Przesłanie pliku, jeśli jest poprawny

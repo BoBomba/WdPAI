@@ -21,7 +21,7 @@
                 alert('Pomyślnie dodano zdarzenie');
             };
         </script>
-        <?php unset($_SESSION['incident_added']); // Usuń flagę z sesji ?>
+        <?php unset($_SESSION['incident_added']); ?>
     <?php endif; ?>
 
 
@@ -34,11 +34,16 @@
     </nav>
 
     <div class="navbar" id="myNavbar">
+        <p>
+        <?php 
+            echo($_SESSION['name']." ".$_SESSION['surname']);
+        ?>
+        </p>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="/newIncident">Dodaj Incydent</a>
-        <a href="/">Wyloguj</a>
+        <a href="/logout">Wyloguj</a>
     </div>
 
     <main>

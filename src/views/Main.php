@@ -9,6 +9,17 @@
 </head>
 
 <body class="main">
+
+    <?php if (isset($_SESSION['logout']) && $_SESSION['logout']): ?>
+        <script>
+            window.onload = function () {
+                alert('Pomyślnie Wylogowano');
+            };
+        </script>
+        <?php unset($_SESSION['logout']);  ?>
+    <?php endif; ?>
+
+
     <div class="main-container">
         <img src="src/images/MpkGo.svg">
         <img src="src/images/MpkGo_Icon.svg">

@@ -8,5 +8,7 @@
 <body>
     <h1>ERROR 404</h1>
     <p>Nie ma takiej strony     :(<p>
+
+    <a href="/">Wróć na strone główną</a>
 </body>
 </html>

@@ -3,6 +3,9 @@
 // Importuj klasę DefaultController.php i ErrorController
 require_once 'src/controllers/DefaultController.php';
 require_once 'src/controllers/ErrorController.php';
+require_once 'src/controllers/ProjectController.php';
+require_once 'src/controllers/SecurityController.php';
+
 
 class Routing {
 
@@ -53,30 +56,4 @@ class Routing {
     $object->$action();
 
   }
-
-  // public static function run ($url) {
-  //   // Pobierz akcję z pierwszej części ścieżki URL
-  //   $action = explode("/", $url)[0];
-  
-  //   // Sprawdź, czy istnieje taka trasa w zdefiniowanych trasach
-  //   if (!array_key_exists($action, self::$routes)) {
-  //     die("Wrong url!");
-  //     // TODO dodać przekierowanie na strone 404.html
-  //     $action = 'err404';
-  //     $object-≥$action = self::$routes[$action];
-  //     //$action = err404(); //nie dziala
-  //   }
-
-  //   // Pobierz kontroler zdefiniowany dla danej trasy
-  //   $controller = self::$routes[$action];
-
-  //   // Stwórz obiekt kontrolera
-  //   $object = new $controller;
-
-  //   // Domyślna akcja, jeśli nie została podana w ścieżce URL
-  //   $action = $action ?: 'Main';
-
-  //   // Wywołaj akcję na obiekcie kontrolera
-  //   $object->$action();
-  // }
 }

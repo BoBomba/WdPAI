@@ -29,10 +29,7 @@
     </div>
 
     <main>
-        <gmp-map center="50.06553268432617,19.943950653076172" zoom="14" map-id="DEMO_MAP_ID">
-            <gmp-advanced-marker position="50.06553268432617,19.943950653076172" title="My location">
-            </gmp-advanced-marker>
-        </gmp-map>
+        <a href="/newIncident">Dodaj Incydent</a>
     </main>
 
     <footer>

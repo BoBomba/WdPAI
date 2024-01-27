@@ -142,6 +142,10 @@ a {
 }
 
 #forgot {
+    color: #6938D3;
+}
+
+#messages {
     color: red;
 }
 

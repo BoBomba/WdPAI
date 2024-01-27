@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/global.css">
-    <title>Document</title>
+    <title>New Incident</title>
 </head>
 
 <body class="incident">

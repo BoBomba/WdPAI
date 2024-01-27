@@ -10,19 +10,28 @@
 
 <body class="login">
     <div id="powrot" ><a href="/" id="logreg">Powrót</a></div>
-        <div class="main-container" style="height: 25em;">
+        <div class="main-container" style="height: 27em;">
             <h1>Login</h1>
             <form action="/login" method="POST">
                 <div id="input">
                     <!-- <img src="src/images/user.png"> jakby nie dzialało svg-->
                     <img src="src/images/user.svg">
-                    <input type="email" placeholder="Wprowadź email">
+                    <input type="email" name="email" placeholder="Wprowadź email">
                 </div>
                 <div id="input">
                     <!-- <img src="src/images/lock.png" id="lock"> to samo -->
                     <img src="src/images/lock.svg" id="lock">
-                    <input type="password" placeholder="Wprowadź hasło">
+                    <input type="password" name="password" placeholder="Wprowadź hasło">
                 </div>
+
+                <div id="messages"><?php
+                        if (isset($messages)){
+                            foreach ($messages as $message){
+                                echo "".$message."";
+                            } 
+                        }
+                ?></div>
+
                 <button id="logreg" type="submit">Zaloguj się</button>
                 <button id="logreg" type="reset">reset</button>
             </form>

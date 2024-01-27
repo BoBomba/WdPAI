@@ -26,6 +26,7 @@
                 <button id="logreg" type="submit">Zaloguj się</button>
                 <button id="logreg" type="reset">reset</button>
             </form>
+            <a  id="forgot" href="/forgotpasswd">Zapomniałeś hasła?</a>
             <a id="logreg" href="/register">Zarejestruj się</a>
         </div>
 </body>

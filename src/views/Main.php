@@ -8,7 +8,7 @@
     <title>MpkGo</title>
 </head>
 
-<body>
+<body class="main">
     <div class="main-container">
         <img src="src/images/MpkGo.svg">
         <img src="src/images/MpkGo_Icon.svg">

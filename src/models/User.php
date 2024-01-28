@@ -15,11 +15,8 @@ class User {
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
-        if ($userType === 'admin') {
-            $this->userType = $userType;
-        } else {
-        $this->userType = 'normalUser';
-        }
+        $this->userType = $userType;
+
     }
 
     public function getId(): int {

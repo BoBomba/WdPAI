@@ -10,6 +10,7 @@ body>.dashboard {
 }
 
 nav {
+    z-index: 1;
     color: white;
     background-color: #6938D3;
     height: 70px;
@@ -77,7 +78,7 @@ ul {
 .news {
     display: flex;
     flex-wrap: wrap;
-    gap: 1 rem;
+    /*gap: 1 rem;*/
     justify-content: center;
 }
 
@@ -210,8 +211,7 @@ form>#logreg {
     border-bottom-right-radius: 1.25rem;
     top: 0;
     left: 0;
-    width: 25%;
-    height: 75%;
+    padding: 1em;
     background-color: white;
     box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.25);
     /* z-index: 1000; */
@@ -223,6 +223,11 @@ form>#logreg {
 .navbar a:hover {
     background-color: #bebebe;
 }
+
+#navMenu {
+    cursor: pointer;
+}
+
 
 #regbutton {
     display: flex;

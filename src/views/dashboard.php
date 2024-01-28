@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/global.css">
+
+    <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans"
+            rel="stylesheet"
+    />
+
     <script src="./public/js/script.js"></script>
 
-    <script async src="https://maps.googleapis.com/maps/api/js?key=____&callback=console.debug&libraries=maps,marker&v=beta">
-    </script>
-    
+    <link rel="stylesheet" href="./public/css/map.css">
+
+        <!--Mapy-->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css' rel='stylesheet' />
+    <script type="module" src="./public/js/mapTokens.js"></script>
+    <script type="module" src="./public/js/maps.js"></script>
+
     <title>Dashboard</title>
 </head>
 
@@ -35,8 +46,14 @@
 
     <div class="navbar" id="myNavbar">
         <p>
-        <?php 
-            echo($_SESSION['name']." ".$_SESSION['surname']);
+        <?php
+            if($_SESSION){
+                echo($_SESSION['name']." ".$_SESSION['surname']);
+            }
+            else{
+                echo("Niezalogowany");
+            }
+        //var_dump($_SESSION);
         ?>
         </p>
         <a href="#">Home</a>
@@ -47,7 +64,10 @@
     </div>
 
     <main>
-        
+            <!--TODO dodac punkty z incydentami oraz baze danych do niej -->
+            <div id='map'></div>
+
+
     </main>
 
     <footer>

@@ -26,12 +26,14 @@ class SecurityController extends AppController
 //            sprawdzenie uzytkownika
 //            var_dump($user);
 
-            if ($user->getEmail() === $email && password_verify($password, $user->getPassword())) {
+            if ($user !== NULL && password_verify($password, $user->getPassword())) {
                 // Użytkownik jest zalogowany, ustawienie zmiennych sesji
                 $_SESSION['user_id'] = $user->getId();
                 $_SESSION['logged_in'] = true;
                 $_SESSION['name'] = $user->getName();
                 $_SESSION['surname'] = $user->getSurname();
+
+                //var_dump($_SESSION);
 
                 // Przekierowanie na dashboard lub inną stronę
                 // return $this->render('dashboard');
@@ -82,8 +84,6 @@ class SecurityController extends AppController
                 $this->messages[] = 'Hasła się nie zgadzają.<br>';
             }
 
-            // TODO: Zapisz użytkownika do bazy danych
-
             $userRepo = new UserRepository();
             if ($userRepo->getUser($email) !== null) {
                 $this->messages[] = 'Użytkownik z tym adresem email już istnieje.<br>';
@@ -100,7 +100,7 @@ class SecurityController extends AppController
 
             //$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-            $userType = NULL; // Domyślny typ użytkownika
+            $userType = 'normalUser'; // Domyślny typ użytkownika
 
             $userRepo->addUser($userID, $email, $password, $name, $surname, $userType);
 

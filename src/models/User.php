@@ -8,13 +8,18 @@ class User {
     private $surname;
     private $userType;
 
-    public function __construct(string $email, string $password, string $name, string $surname) {
-        $this->id = uniqid();
+    public function __construct(string $id, string $name, string $surname, string $email, string $password, $userType)
+    {
+        $this->id = $id;
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
+        if ($userType === 'admin') {
+            $this->userType = $userType;
+        } else {
         $this->userType = 'normalUser';
+        }
     }
 
     public function getId(): int {

@@ -3,6 +3,7 @@ session_start();
 
 require_once 'AppController.php';
 require_once __DIR__ . '/../models/User.php';
+require_once __DIR__ . '/../repository/UserRepository.php';
 
 class SecurityController extends AppController
 {
@@ -10,12 +11,20 @@ class SecurityController extends AppController
     private $messages = [];
     public function login()
     {
+
+        $userRepository = new UserRepository();
+
         // Utwórz użytkownika dla celów testowych
-        $user = new User('jankowaliski@gmail.com', password_hash('admin',PASSWORD_DEFAULT), 'jan', 'kowalski');
+//        $user = new User('jankowaliski@gmail.com', password_hash('admin',PASSWORD_DEFAULT), 'jan', 'kowalski');
 
         if ($this->isPost()) {
             $email = $_POST["email"];
             $password = $_POST["password"];
+
+            $user = $userRepository->getUser($email);
+
+//            sprawdzenie uzytkownika
+//            var_dump($user);
 
             if ($user->getEmail() === $email && password_verify($password, $user->getPassword())) {
                 // Użytkownik jest zalogowany, ustawienie zmiennych sesji
@@ -36,20 +45,6 @@ class SecurityController extends AppController
                 return $this->render('login', ['messages' => $this->messages]);
             }
 
-            // if ($user->getEmail() !== $email) {
-            //     return $this->render('/login', ['messages' => ['User does not exist!']]);
-            // }
-
-            // if ($user->getPassword() !== $password) {
-            //     return $this->render('/login', ['messages' => ['Wrong password!']]);
-            // }
-
-            // // Przykład ustawienia zmiennych sesji po pomyślnym zalogowaniu
-            // $_SESSION['user_id'] = $user->getId(); // Załóżmy, że $userId to ID zalogowanego użytkownika
-            // $_SESSION['logged_in'] = true; // Flaga, że użytkownik jest zalogowany
-
-
-            // Użytkownik został zweryfikowany, przekieruj na '/dashboard'
             
         }
 
@@ -87,14 +82,27 @@ class SecurityController extends AppController
                 $this->messages[] = 'Hasła się nie zgadzają.<br>';
             }
 
-            // Tworzenie nowego użytkownika
-            $user = new User($email, password_hash($password, PASSWORD_DEFAULT), $name, $surname);
-
             // TODO: Zapisz użytkownika do bazy danych
+
+            $userRepo = new UserRepository();
+            if ($userRepo->getUser($email) !== null) {
+                $this->messages[] = 'Użytkownik z tym adresem email już istnieje.<br>';
+            }
+
+            // Tworzenie nowego użytkownika do celow testowych
+            //$user = new User($email, password_hash($password, PASSWORD_DEFAULT), $name, $surname);
 
             if (!empty($this->messages)) {
                 return $this->render('register', ['messages' => $this->messages]);
             }
+
+            $userID = uniqid();
+
+            //$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+            $userType = NULL; // Domyślny typ użytkownika
+
+            $userRepo->addUser($userID, $email, $password, $name, $surname, $userType);
 
             // Przekierowanie na stronę logowania lub dashboard
             return $this->render('/login', ['messages' => ['Rejestracja zakończona sukcesem']]);

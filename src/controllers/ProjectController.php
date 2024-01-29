@@ -91,11 +91,8 @@ class ProjectController extends AppController
 
         $incident->pushIncident($_POST['title'], $_POST['description'], $location, $time , $userId, $_FILES['file']['name']);
 
-        // Ustaw flagę sukcesu w sesji
         $_SESSION['incident_added'] = true;
 
-
-        // Przekieruj na dashboard
         return $this->render('/dashboard');
     }
 

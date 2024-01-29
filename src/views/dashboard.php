@@ -63,7 +63,6 @@
     </div>
 
     <main>
-            <!--TODO dodac punkty z incydentami oraz baze danych do niej -->
             <div id='map'></div>
 
 

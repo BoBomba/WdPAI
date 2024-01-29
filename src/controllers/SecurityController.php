@@ -41,8 +41,6 @@ class SecurityController extends AppController
                 header("Location: " . $url . "/dashboard");
                 exit();
             } else {
-                // Logika, jeśli dane logowania są nieprawidłowe
-                // Można dodać komunikat o błędzie
                 $this->messages[] = 'Nieprawidłowy email lub hasło';
                 return $this->render('login', ['messages' => $this->messages]);
             }
@@ -50,7 +48,6 @@ class SecurityController extends AppController
             
         }
 
-        // Jeśli formularz nie został przesłany metodą POST, wyświetl stronę logowania
         return $this->render('/login', ['messages' => []]);
     }
 
@@ -104,11 +101,9 @@ class SecurityController extends AppController
 
             $userRepo->addUser($userID, $email, $password, $name, $surname, $userType);
 
-            // Przekierowanie na stronę logowania lub dashboard
             return $this->render('/login', ['messages' => ['Rejestracja zakończona sukcesem']]);
         }
 
-        // Wyświetlanie formularza rejestracji, jeśli metoda nie jest POST
         return $this->render('register', ['messages' => []]);
     }
 

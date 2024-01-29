@@ -42,7 +42,7 @@ class DefaultController extends AppController {
     {
         if($this->isGet())
         {
-            return $this->render('register'); // nazwa strony html bez '.html'
+            return $this->render('register');
         }
         if($this->isPost())
         {
@@ -54,7 +54,7 @@ class DefaultController extends AppController {
     {
         if($this->isGet())
         {
-            return $this->render('newIncident'); // nazwa strony html bez '.html'
+            return $this->render('newIncident');
         }
         if($this->isPost())
         {

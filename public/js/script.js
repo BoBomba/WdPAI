@@ -1,6 +1,5 @@
 // hamburger menu
 
-
 //alert('script');
 
 function toggleMenu() {

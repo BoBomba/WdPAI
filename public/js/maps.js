@@ -1,12 +1,10 @@
 
 import { YOUR_MAPBOX_ACCESS_TOKEN1 } from './mapTokens.js';
 
-//alert('map');
 
 mapboxgl.accessToken = YOUR_MAPBOX_ACCESS_TOKEN1;
 //alert(YOUR_MAPBOX_ACCESS_TOKEN)
 
-//
 
 fetch("/Incidents", {
     method: "GET"
@@ -36,24 +34,6 @@ function placeMarkers(Incidents) {
         el.className = 'marker';
 
         // make a marker for each feature and add to the map
-        if (feature.file !== null) {
-            new mapboxgl.Marker(el)
-                .setLngLat(feature.location)
-                .setPopup(
-                    new mapboxgl.Popup({offset: 25}) // add popups
-                        .setHTML(
-                            `<h3>${feature.title}</h3>
-                         <p>${feature.decription}</p>
-                         <p>${feature.location}</p>
-                         <p>${feature.time}</p>
-                         <p>${feature.author}</p>
-                         <p>${feature.file}</p>
-                        `
-                        )
-                )
-                .addTo(map);
-        }
-        else {
             new mapboxgl.Marker(el)
                 .setLngLat(feature.location)
                 .setPopup(
@@ -68,6 +48,5 @@ function placeMarkers(Incidents) {
                         )
                 )
                 .addTo(map);
-        }
     }
 }

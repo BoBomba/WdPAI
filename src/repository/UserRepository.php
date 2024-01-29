@@ -29,6 +29,24 @@ class UserRepository extends Repository
         );
     }
 
+    public function getUsername(string $user_id): ?string
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM schema.users WHERE user_id = :user_id
+        ');
+        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user == false) {
+            return null;
+        }
+
+        return $user['name']." ".$user['surname'];
+
+    }
+
     public function addUser($id ,$email, $password, $name, $surname, $usertype)
     {
       try {

@@ -10,7 +10,7 @@ body>.dashboard {
 }
 
 nav {
-    z-index: 1;
+    z-index: 2;
     color: white;
     background-color: #6938D3;
     height: 70px;
@@ -203,6 +203,7 @@ form>#logreg {
 /* hamburger menu */
 
 .navbar {
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;

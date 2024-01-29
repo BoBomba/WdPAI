@@ -6,18 +6,18 @@ class Incident {
     private $title;
     private $description;
     private $location;
-    private $status;
+    private $time;
     private $file;
 
     private $author;
 
-    public function __construct($id ,$title, $description, $location, $status, $file, $user)
+    public function __construct($id ,$title, $description, $location, $time, $file, $user)
     {
-        $this->id = $user->id;
+        $this->id = $id;
         $this->title = $title;
         $this->description = $description;
         $this->location = $location;
-        $this->status = $status;
+        $this->time = $time;
         $this->file = $file;
         $this->author = $user;
     }
@@ -40,9 +40,9 @@ class Incident {
     {
         return $this->location;
     }
-    public function getStatus()
+    public function getTime()
     {
-        return $this->status;
+        return $this->time;
     }
     public function getFile()
     {
@@ -69,8 +69,8 @@ class Incident {
     public function setLocation($location){
         $this->location = $location;
     }
-    public function setStatus($status){
-        $this->status = $status;
+    public function setTime($time){
+        $this->time = $time;
     }
     public function setFile($file){
         $this->file = $file;

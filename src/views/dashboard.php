@@ -56,9 +56,8 @@
         //var_dump($_SESSION);
         ?>
         </p>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
+        <a href="/dashboard">Home</a>
+
         <a href="/newIncident">Dodaj Incydent</a>
         <a href="/logout">Wyloguj</a>
     </div>

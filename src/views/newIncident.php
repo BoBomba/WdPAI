@@ -21,12 +21,18 @@
                 <div id="input">
                     <input type="text" name="description" rows="2" placeholder="Opisz zdarzenie">
                 </div>
+
+<!--                TODO zrobić zaznaczanie punktu na mapie-->
                 <div id="input">
-                    <input type="text" name="location" placeholder="Gdzie się to stało?">
+                    <input type="number" step="any" name="longitude" placeholder="Długość geograficzna (np. 19.93658)">
                 </div>
                 <div id="input">
-                    <input type="file" name="file" placeholder="Dodaj Zdjęcie">
+                    <input type="number" step="any" name="latitude" placeholder="Szerokość geograficzna (np. 50.06143)">
                 </div>
+
+<!--                <div id="input">-->
+<!--                    <input type="file" name="file" placeholder="Dodaj Zdjęcie">-->
+<!--                </div>-->
 
                 <div id="messages"><?php
                         if (isset($messages)){

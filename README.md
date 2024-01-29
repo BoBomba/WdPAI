@@ -1,40 +1,44 @@
-# first.network.app
-first network app
+![Logo](src/images/MpkGo_Icon.png)
 
-A brief one- or two-sentence description of your project.
+# MpkGo
 
-## Table of Contents
+## Opis
+MpkGo to aplikacja webowa służąca do zgłaszania i wyszukiwania incydentów w komunikacji miejskiej. Umożliwia użytkownikom zgłaszanie różnych zdarzeń, takich jak opóźnienia, awarie czy problemy w pojazdach komunikacji miejskiej, a także przeglądanie zgłoszonych incydentów na mapie.
 
-- [Introduction](#introduction)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## Spis Treści
+- [Opis](#opis)
+- [Rozpoczęcie](#rozpoczęcie)
+- [Wymagania Wstępne](#wymagania-wstępne)
+- [Instalacja](#instalacja)
+- [Użycie](#użycie)
+- [Współpraca](#współpraca)
+- [Licencja](#licencja)
 
-## Introduction
+## Rozpoczęcie
 
-Provide a more detailed introduction to your project. Explain what it does, why it's useful, and who the target audience is.
+### Wymagania Wstępne
+Aby uruchomić aplikację MpkGo, potrzebujesz:
+- Docker
+- Edytora kodu (np. Visual Studio Code)
+- Środowiska PHP
+- Node.js (do obsługi JavaScript)
 
-## Getting Started
+### Instalacja
+Aby zainstalować MpkGo, wykonaj następujące kroki:
+1. Sklonuj repozytorium:
+```git clone https://example.com/MpkGo.git```
+2. Przejdź do katalogu projektu i uruchom kontenery Dockera:
+```cd MpkGo```
+```docker-compose up -d```
+3. Uruchom aplikację zgodnie z konfiguracją Dockera.
 
-### Prerequisites
+## Użycie
+Po uruchomieniu aplikacji MpkGo, możesz zacząć zgłaszać incydenty w komunikacji miejskiej oraz wyszukiwać i przeglądać zgłoszenia na mapie. Aplikacja oferuje intuicyjny interfejs użytkownika, który umożliwia łatwą nawigację i obsługę.
 
-List any prerequisites or dependencies that users need to have installed before they can use your project. Include links to installation guides if available.
+## Współpraca
+Zachęcamy do współtworzenia projektu MpkGo! Jeśli masz pomysły na nowe funkcje lub zauważyłeś błędy, skontaktuj się z nami lub utwórz issue w repozytorium GitHub. Wszelkie pull requesty są mile widziane.
 
-### Installation
+## Licencja
+```Copyright 2023 Damian Guca```
 
-Step-by-step instructions on how to install your project. 
-
-## Usage
-
-something
-
-## Contributing
-
-something
-
-## License
-
-something
+```Licencjonowane na licencji OpenSource.```

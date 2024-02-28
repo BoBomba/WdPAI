@@ -1,1 +1,2 @@
-siema
+export const YOUR_MAPBOX_ACCESS_TOKEN1 = 'pk.eyJ1IjoiYm9ib21iYSIsImEiOiJjbHJ4c3h6c3MxMmh1MmpvNWJvbW42cXkzIn0.gVxsEKQ3n13AmXSTI3TX-A';
+export const YOUR_MAPBOX_ACCESS_TOKEN2 = 'pk.eyJ1IjoiYm9ib21iYSIsImEiOiJjbHJ4dW05NnMxZ2tsMm9wYmVpYWkxeHkyIn0.dh-uNWEncmEue5EEvj6z6A';

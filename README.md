@@ -31,6 +31,8 @@ Aby zainstalować MpkGo, wykonaj następujące kroki:
 ```cd MpkGo```
 ```docker-compose up -d```
 3. Uruchom aplikację zgodnie z konfiguracją Dockera.
+4. Pobierz token ze strony mapbox i dodaj go do kodu w miejscu 
+```/public/js/mapTokens.js```
 
 ## Użycie
 Po uruchomieniu aplikacji MpkGo, możesz zacząć zgłaszać incydenty w komunikacji miejskiej oraz wyszukiwać i przeglądać zgłoszenia na mapie. Aplikacja oferuje intuicyjny interfejs użytkownika, który umożliwia łatwą nawigację i obsługę.
